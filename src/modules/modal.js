@@ -26,7 +26,7 @@ const modal = () => {
     }
     
     body.addEventListener('click', (e) => {
-        if ((e.target.closest('.button-services')) || (e.target.closest('.callback-btn'))) {
+        if ((e.target.closest('.fancyboxModal')) || (e.target.closest('.callback-btn'))) {
             open()
         } else if ((e.target.closest('.modal-overlay')) || (e.target.closest('.modal-close'))) {
             close()

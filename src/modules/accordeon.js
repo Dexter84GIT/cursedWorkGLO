@@ -1,6 +1,8 @@
 const accordeon = () => {
     const accBody = document.querySelector('.accordeon')
     const accElement = document.querySelectorAll('.accordeon .element')
+    let active
+
 
     accElement.forEach(elem => {
         const accTitle = elem.querySelectorAll('.accordeon .title')
