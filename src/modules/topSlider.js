@@ -17,7 +17,7 @@ const topSlider = () => {
         slides.forEach((item, index) => { 
             if (index === count) {
                 item.classList.add('active')
-                item.style.transition = 0.3 + 's'
+//                item.style.transition = 0.3 + 's'
                 item.style.marginTop = `-${(height * index)}px`
             } else if (index !== count) {
                 item.classList.remove('active')
@@ -34,7 +34,7 @@ const topSlider = () => {
 
     }
 
-    const startSlide = (timer = 5000) => {
+    const startSlide = (timer = 3000) => {
         interval = setInterval(autoSlide, timer)
     }
 startSlide()
