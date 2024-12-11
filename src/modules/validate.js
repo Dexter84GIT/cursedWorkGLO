@@ -6,7 +6,7 @@ const validate = (check) => {
     const phoneValid = /[^\d\+]/gi
 
     name.addEventListener('input', (e) => {
-        let value = e.target.value
+        const value = e.target.value
         if (nameValid.test(value) && value !== '') {
             value = value.replace(nameValid, '')
             e.target.value = value
@@ -17,7 +17,7 @@ const validate = (check) => {
     })
 
     phone.addEventListener('input', (e) => {
-        let value = e.target.value
+        const value = e.target.value
         if (phoneValid.test(value) && value !== '') {
             value = value.replace(phoneValid, '')
             e.target.value = value
