@@ -15,6 +15,7 @@ const validate = (check) => {
             name.style.borderColor = 'green'
         }
     })
+    
     phone.addEventListener('input', (e) => {
         let value = e.target.value
         if (phoneValid.test(value) && value !== '') {

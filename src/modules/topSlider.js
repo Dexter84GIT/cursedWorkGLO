@@ -8,6 +8,7 @@ const topSlider = () => {
 
     const autoSlide = () => {
         count++
+        
         if (count >= slides.length) {
             count = 0
         }
@@ -23,6 +24,7 @@ const topSlider = () => {
                 item.style.marginTop = 0 + 'px'
             }
         })
+
         table.forEach((item, index) => { 
             if (index === count) {
                 item.classList.add('active')
@@ -31,9 +33,11 @@ const topSlider = () => {
             }
         })
     }
+
     const startSlide = (timer = 3000) => {
         interval = setInterval(autoSlide, timer)
     }
+
     startSlide()
 }    
 

@@ -24,7 +24,7 @@ const servicesSlider = () => {
               slidesPerView: 3,
               spaceBetween: 50,
             },
-          },
-      })
+        },
+    })
 }
 export default servicesSlider

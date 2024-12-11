@@ -59,6 +59,7 @@ const send = () => {
         e.preventDefault()
         sendForm()
     })
+    
     validate()
 }
 
