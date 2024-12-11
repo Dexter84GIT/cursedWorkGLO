@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/Dexter84GIT/cursedWorkGLO/issues"
   },
+  "dependencies": {
+    "swiper": "^11.1.15"
+  },
   "homepage": "https://github.com/Dexter84GIT/cursedWorkGLO#readme",
   "devDependencies": {
     "webpack": "^5.97.0",

@@ -897,12 +897,14 @@ video#video_background {
 	background: url(../images/pattern2.png);
 	z-index: 1;
 }
+/*
 .services-carousel > div {
 	display: none;
 }
 .services-carousel > div.service-slide-active {
 	display: block;
 }
+	*/
 @media only screen and (min-width: 768px) {
 	.top-slider .item {
 		height: 400px;
@@ -1081,6 +1083,7 @@ video#video_background {
 .services-arrow {
 	display: flex;
 	justify-content: center;
+	gap: 50px;
 }
 
 .arrow-right,
@@ -1208,9 +1211,10 @@ video#video_background {
 	height: 66px;
 	overflow: hidden;
 }
+/*
 .services-elements img {
 	width: 100%;
-}
+}*/
 .services-elements > .row > hr:nth-of-type(2n) {
 	clear: both;
 }
@@ -1219,7 +1223,10 @@ video#video_background {
 	font-weight: bold;
 	color: #2fab6d;
 }
-
+.services-elements .swiper-button-next, .services-elements .swiper-button-prev {
+	position: relative;
+	margin-top: 0px;
+}
 .up {
 	position: fixed;
 	bottom: 50px;
