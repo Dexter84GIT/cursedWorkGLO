@@ -3,7 +3,7 @@ const validate = (check) => {
     const name = document.querySelector('input[name="fio"]')
     const phone = document.querySelector('input[name="tel"]')
     const nameValid = /[^а-яА-Я{8,}]/gi
-    const phoneValid = /[^\d{8,}\+]/gi
+    const phoneValid = /[^\d\+]/gi
 
     name.addEventListener('input', (e) => {
         let value = e.target.value
@@ -15,7 +15,7 @@ const validate = (check) => {
             name.style.borderColor = 'green'
         }
     })
-    
+
     phone.addEventListener('input', (e) => {
         let value = e.target.value
         if (phoneValid.test(value) && value !== '') {
