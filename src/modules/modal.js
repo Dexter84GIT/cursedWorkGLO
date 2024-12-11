@@ -7,7 +7,7 @@ const modal = () => {
     
     const open = () => {
         animate({
-            duration: 1000,
+            duration: 300,
             timing(timeFraction) {
               return timeFraction;
             },

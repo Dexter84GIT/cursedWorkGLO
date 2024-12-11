@@ -2,13 +2,11 @@ import { validate } from './validate'
 
 const send = () => {
     const form = document.querySelector('form[name="form-callback"]')
-    let status = document.createElement('div')
+    const status = document.createElement('div')
     const waitStatus = 'Идёт отправка...'
     const successStatus = 'Ваша заявка отправлена!'
     const errorStatus = 'Произошла ошибка :('
     const validateError = 'Введите верные данные'
-
-    let check = false
 
     const sendData = (data) => {
         return fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -27,7 +25,13 @@ const send = () => {
 
         status.textContent = waitStatus
         status.classList.add('status-text')
+        status.style.display = 'block'
         form.append(status)
+        if (status) {
+            setTimeout(() => {
+                status.style.display = 'none'
+            }, 5000);
+        }
 
         formData.forEach((val, key) => {
             formBody[key] = val
@@ -47,16 +51,15 @@ const send = () => {
                 status.textContent = errorStatus
             })
         } else {
-            console.log(check);
             status.textContent = validateError
         }
     }
 
-       form.addEventListener('submit', (e) => {
-           e.preventDefault()
-           sendForm()
-       })
-       validate()
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        sendForm()
+    })
+    validate()
 }
 
 export default send

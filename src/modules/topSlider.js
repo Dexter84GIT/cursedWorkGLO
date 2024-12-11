@@ -12,12 +12,11 @@ const topSlider = () => {
             count = 0
         }
 
-        let height = slider.clientHeight
+        const height = slider.clientHeight
 
         slides.forEach((item, index) => { 
             if (index === count) {
                 item.classList.add('active')
-//                item.style.transition = 0.3 + 's'
                 item.style.marginTop = `-${(height * index)}px`
             } else if (index !== count) {
                 item.classList.remove('active')
@@ -31,13 +30,11 @@ const topSlider = () => {
                 item.classList.remove('active')
             }
         })
-
     }
-
     const startSlide = (timer = 3000) => {
         interval = setInterval(autoSlide, timer)
     }
-startSlide()
+    startSlide()
 }    
 
 export default topSlider

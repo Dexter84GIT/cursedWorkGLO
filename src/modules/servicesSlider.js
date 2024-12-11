@@ -4,11 +4,9 @@ import { Navigation } from 'swiper/modules';
 const servicesSlider = () => {
     const swiper = new Swiper('.swiper', {
         modules: [Navigation],
-        // Optional parameters
         loop: true,
         slidesPerView: 3,
         spaceBetween: 10,
-        // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -27,7 +25,6 @@ const servicesSlider = () => {
               spaceBetween: 50,
             },
           },
-      });
+      })
 }
-
 export default servicesSlider
