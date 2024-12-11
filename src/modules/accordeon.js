@@ -1,28 +1,17 @@
 const accordeon = () => {
-    const accBody = document.querySelector('.accordeon')
-    const accElement = document.querySelectorAll('.accordeon .element')
-    let active
+    const panelItem = document.querySelectorAll('.accordeon .title')
 
-
-    accElement.forEach(elem => {
-        const accTitle = elem.querySelectorAll('.accordeon .title')
-        const accContent = elem.querySelectorAll('.accordeon .element-content')
-        elem.addEventListener('click', (e) => {
-            if ((e.target.closest('.active')) && (e.target.closest('.title'))) {
-                elem.classList.remove('active')
-                accContent.forEach(text => {
-                    text.style.display = 'none'
-                }) 
-            } else if ((!e.target.closest('.active')) && (e.target.closest('.title'))) {
-                elem.classList.add('active')
-                accContent.forEach(text => {
-                    text.style.display = 'block'
-                }) 
-            } else if (elem.classList !== 'active') {
-
-            }
+    let active;
+    panelItem.forEach(function(item, i, panelItem) {
+    item.addEventListener('click', function(e) {
+        this.classList.add('active');
+        this.nextElementSibling.classList.add('active');
+        if (active) {
+            active.classList.remove('active');
+        active.nextElementSibling.classList.remove('active');
+        } 
+        active = (active === this) ? 0 : this;
         })
-        
     })
 }
 

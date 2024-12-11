@@ -1001,7 +1001,7 @@ video#video_background {
 	-o-transition: all 200ms ease-out;
 	transition: all 200ms ease-out;
 }
-.accordeon .element.active .title {
+.accordeon .title.active {
 	background: #e9bb26;
 	color: #fff !important;
 }
@@ -1023,12 +1023,16 @@ video#video_background {
 	-o-transition: all 200ms ease-out;
 	transition: all 200ms ease-out;
 }
-.accordeon .element.active .title:before {
+.accordeon .title.active:before {
 	background: url(../images/minus.png) 50% 50% no-repeat #333;
 }
-.accordeon > div:first-of-type .element-content {
+.title.active + .element-content {	
 	display: block;
 }
+/*
+.accordeon > div:first-of-type .element-content {
+	display: block;
+}*/
 .accordeon .element .title:hover:before {
 	background-color: #333;
 }
