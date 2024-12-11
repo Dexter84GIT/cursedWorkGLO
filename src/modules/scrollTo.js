@@ -5,7 +5,7 @@ const scrollTo = () => {
     let screenY = topSlider.offsetHeight
 
     window.onscroll = function() {
-      if (pageYOffset > screenY) {
+      if (scrollY > screenY) {
         btn.style.opacity = 1
       } else {
         btn.style.opacity = 0
